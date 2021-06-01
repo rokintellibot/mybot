@@ -2,12 +2,19 @@
 <html>
 <body>
 
-<?php
-echo "Today is " . date("Y/m/d") . "<br>";
-echo "Today is " . date("Y.m.d") . "<br>";
-echo "Today is " . date("Y-m-d") . "<br>";
-echo "Today is " . date("l");
-?>
+<p>The internal clock in JavaScript starts at midnight January 1, 1970.</p>
+<p>Click the button to display the number of milliseconds since midnight, January 1, 1970.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+  document.getElementById("demo").innerHTML = new Date().toISOString().split("T")[0];
+}
+</script>
 
 </body>
 </html>
